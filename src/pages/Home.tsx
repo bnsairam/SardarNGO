@@ -10,12 +10,17 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-primary/90 via-primary/70 to-secondary/90 mt-16">
         <div className="absolute inset-0 overflow-hidden">
           <img 
-            src="/img/home1.jpeg" 
-            alt="Hero Background" 
+            src="/img/home2.png" 
+            alt="Judo Training Session" 
             className="w-full h-full object-cover mix-blend-overlay"
           />
         </div>
         <div className="relative z-10 text-center px-4 text-white">
+          <img 
+            src="/img/logo.png" 
+            alt="Sardar Vallabhbhai Patel Sports Academy Logo" 
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 drop-shadow-2xl"
+          />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 drop-shadow-lg leading-tight">
             SHAPING AN <br />INCLUSIVE FUTURE
           </h1>
@@ -79,11 +84,21 @@ const Home = () => {
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">3 SPORTS SUPPORTED</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {["Karate", "Judo", "Taekwondo"].map((sport) => (
-              <Card key={sport} className="overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="aspect-video bg-muted"></div>
+            {[
+              { name: "Karate", img: "/img/karatehome.jpg" },
+              { name: "Judo", img: "/img/judo.jpg" },
+              { name: "Taekwondo", img: "/img/teakhome.jpg" }
+            ].map((sport) => (
+              <Card key={sport.name} className="overflow-hidden hover:shadow-xl transition-shadow group">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={sport.img} 
+                    alt={`${sport.name} training`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-center">{sport}</h3>
+                  <h3 className="text-2xl font-bold text-center">{sport.name}</h3>
                 </div>
               </Card>
             ))}

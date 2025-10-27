@@ -29,6 +29,7 @@ const Header = () => {
             <li><Link to="/" className="hover:text-primary transition-colors">HOME</Link></li>
             <li><Link to="/about" className="hover:text-primary transition-colors">ABOUT US</Link></li>
             <li><Link to="/students" className="hover:text-primary transition-colors">STUDENTS</Link></li>
+            <li><Link to="/gallery" className="hover:text-primary transition-colors">GALLERY</Link></li>
             <li><Link to="/contact" className="hover:text-primary transition-colors">CONTACT</Link></li>
             <li>
               <Button className="bg-primary hover:bg-primary/90">
@@ -53,6 +54,7 @@ const Header = () => {
             <li><Link to="/" onClick={() => setIsMenuOpen(false)} className="block hover:text-primary">HOME</Link></li>
             <li><Link to="/about" onClick={() => setIsMenuOpen(false)} className="block hover:text-primary">ABOUT US</Link></li>
             <li><Link to="/students" onClick={() => setIsMenuOpen(false)} className="block hover:text-primary">STUDENTS</Link></li>
+            <li><Link to="/gallery" onClick={() => setIsMenuOpen(false)} className="block hover:text-primary">GALLERY</Link></li>
             <li><Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block hover:text-primary">CONTACT</Link></li>
             <li>
               <Button className="w-full bg-primary hover:bg-primary/90">

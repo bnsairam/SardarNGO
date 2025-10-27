@@ -51,8 +51,14 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">OUR COACHES</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {coaches.map((coach, index) => (
-              <Card key={index} className="p-6 hover:shadow-xl transition-shadow">
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg mb-4"></div>
+              <Card key={index} className="p-6 hover:shadow-xl transition-shadow group">
+                <div className="aspect-square rounded-lg mb-4 overflow-hidden">
+                  <img 
+                    src={`/img/coach${index + 1}.png`} 
+                    alt={coach.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <h3 className="text-xl font-bold mb-2">{coach.name}</h3>
                 <p className="text-sm text-muted-foreground">{coach.qualification}</p>
               </Card>
